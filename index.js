@@ -100,6 +100,9 @@ app.post("/brown", (req, res) => {
 app.post("/menu", (req, res) => {
   res.render("setting.ejs");
 });
+app.post("/secret", (req, res) => {
+  res.render("secret.ejs");
+});
 
 app.listen(4090, () => {
   console.log("Server running on port 4090");
