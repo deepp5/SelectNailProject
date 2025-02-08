@@ -21,7 +21,7 @@ const requireLogin = (req, res, next) => {
 };
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'images')));
+app.use('/images', express.static('images'));
 
 app.get("/", (req, res) => {
   res.send("Home Page");
