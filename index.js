@@ -94,6 +94,9 @@ app.post("/purpleGlitter", (req, res) => {
 app.post("/yellow", (req, res) => {
   res.render("yellow.ejs");
 });
+app.post("/menu", (req, res) => {
+  res.render("setting.ejs");
+})
 
 app.listen(4090, () => {
   console.log("Server running on port 4090");
