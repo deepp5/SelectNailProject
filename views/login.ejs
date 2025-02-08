@@ -3,51 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Register</title>
+
+    <!-- Google Font: Nunito -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- Custom Fonts -->
+    <style>
+      @font-face {
+        font-family: "Sacramento";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sacramento/v15/buEzpo6gcdjy0EiZMBUG4CMf_f5Iai0Ycw.woff2)
+          format("woff2");
+      }
+
+      /* Apply Nunito globally */
+      body {
+        font-family: "Nunito", sans-serif;
+        background-color: #f8f9fa; /* Light gray background for a modern look */
+      }
+
+      /* Apply Sacramento only to the logo */
+      .logo {
+        font-family: "Sacramento", cursive;
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      /* Centered container for better responsiveness */
+      .login-container {
+        max-width: 400px;
+        width: 100%;
+      }
+    </style>
   </head>
-  <body class="d-flex justify-content-center align-items-center vh-100">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <div class="card shadow-lg">
-            <div class="card-body">
-              <h3 class="text-center mb-4">Login</h3>
-              <form action="/login" method="POST">
-                <div class="mb-3">
-                  <label for="username" class="form-label">Username</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="username"
-                    id="username"
-                    placeholder="Enter your username"
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="password" class="form-label">Password</label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    name="password"
-                    id="password"
-                    placeholder="Enter your password"
-                    required
-                  />
-                </div>
-                <div class="d-grid">
-                  <button type="submit" class="btn btn-dark">Log In</button>
-                </div>
-              </form>
+
+  <body
+    class="d-flex justify-content-center align-items-center vh-100 bg-light"
+  >
+    <div class="login-container">
+      <div class="text-center mb-4">
+        <img
+          src="/images/palette.png"
+          alt=""
+          class="d-inline-block align-middle"
+          width="50"
+        />
+        <h1 class="d-inline-block align-middle ms-2">SelectNail</h1>
+      </div>
+      <div class="card shadow-lg">
+        <div class="card-body">
+          <h3 class="text-center mb-4">Login</h3>
+          <form action="/login" method="POST">
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input
+                type="text"
+                class="form-control"
+                name="username"
+                id="username"
+                placeholder="Enter your username"
+                required
+                aria-label="Username"
+              />
             </div>
-          </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+                aria-label="Password"
+              />
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-dark">Log In</button>
+            </div>
+          </form>
         </div>
       </div>
+
+      <p class="text-center mt-3">
+        Don't have an account? <a href="/register">Sign Up</a>
+      </p>
     </div>
 
     <!-- Bootstrap JS -->

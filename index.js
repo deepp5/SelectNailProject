@@ -20,8 +20,8 @@ const requireLogin = (req, res, next) => {
   next();
 };
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/images', express.static('images'));
+app.use(express.static(path.join(__dirname, "public")));
+app.use("/images", express.static("images"));
 
 app.get("/", (req, res) => {
   res.send("Home Page");
@@ -70,11 +70,31 @@ app.get("/secret", requireLogin, (req, res) => {
   res.render("secret.ejs");
 });
 
-
-app.post("/colorpalette", (req, res) => {
-  res.render("colorpalete.ejs");
+app.post("/bubbleBath", (req, res) => {
+  res.render("bubbleBath.ejs");
+});
+app.post("/black", (req, res) => {
+  res.render("black.ejs");
+});
+app.post("/darkRed", (req, res) => {
+  res.render("darkRed.ejs");
+});
+app.post("/mint", (req, res) => {
+  res.render("mint.ejs");
+});
+app.post("/mutedBlue", (req, res) => {
+  res.render("mutedBlue.ejs");
+});
+app.post("/orange", (req, res) => {
+  res.render("orange.ejs");
+});
+app.post("/purpleGlitter", (req, res) => {
+  res.render("purpleGlitter.ejs");
+});
+app.post("/yellow", (req, res) => {
+  res.render("yellow.ejs");
 });
 
-app.listen(4050, () => {
-  console.log("Server running on port 4040");
+app.listen(4090, () => {
+  console.log("Server running on port 4090");
 });
