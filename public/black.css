@@ -22,7 +22,7 @@ body {
 }
 .hand {
   position: absolute;
-  transform: scale(1.5) translateY(-2em) translateX(2em);
+  transform: scale(1.5) translateY(8em) translateX(8em);
   left: 4em;
 }
 
