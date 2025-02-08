@@ -20,8 +20,8 @@ const requireLogin = (req, res, next) => {
   next();
 };
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/images', express.static('images'));
+app.use(express.static(path.join(__dirname, "public")));
+app.use("/images", express.static("images"));
 
 app.get("/", (req, res) => {
   res.send("Home Page");
@@ -70,11 +70,10 @@ app.get("/secret", requireLogin, (req, res) => {
   res.render("secret.ejs");
 });
 
-
-app.post("/colorpalette", (req, res) => {
-  res.render("colorpalete.ejs");
+app.post("/bubbleBash", (req, res) => {
+  res.render("bubbleBash.ejs");
 });
 
-app.listen(4050, () => {
-  console.log("Server running on port 4040");
+app.listen(4090, () => {
+  console.log("Server running on port 4090");
 });
