@@ -1,3 +1,9 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; 
+}
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -15,7 +21,7 @@
 }
 .hand {
     position: absolute;
-    transform: scale(1.5) translateY(-3em) translateX(2em);
+    transform: scale(1.5) translateY(-2em) translateX(2em);
     left: 4em;
 }
 
@@ -35,7 +41,7 @@
 }
 
 .circle{
-    height: 11em;
-    width: 11em;
+    height: 15em;
+    width: 15em;
 }
 
