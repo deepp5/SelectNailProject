@@ -20,6 +20,9 @@ const requireLogin = (req, res, next) => {
   next();
 };
 
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'images')));
+
 app.get("/", (req, res) => {
   res.send("Home Page");
 });
@@ -66,6 +69,8 @@ app.post("/logout", (req, res) => {
 app.get("/secret", requireLogin, (req, res) => {
   res.render("secret.ejs");
 });
+
+
 app.post("/colorpalette", (req, res) => {
   res.render("colorpalete.ejs");
 });
