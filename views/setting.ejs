@@ -12,6 +12,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: #FFFF; /* Light Gray */
@@ -27,6 +31,23 @@
           font-size: 23px;
           margin-top: 10px;
           margin-bottom: 24px; 
+        }
+        button{
+          font-family: "Raleway", serif;
+          font-optical-sizing: auto;
+          font-weight: 300;
+        }
+        .center-form {
+          display: flex;
+          justify-content: center; 
+          align-items: center; 
+          }
+
+        .btn1{
+          padding: 10px 20px; 
+          font-size: 16px; 
+          border-radius: 5px; 
+          outline-offset: 4px; 
         }
     </style>
   </head>
@@ -53,6 +74,8 @@
                     <button type="submit" class="btn btn-dark">Help</button>
                 </div>
     <div class="d-grid">
-                  <button type="submit" class="btn btn-dark">About</button>
+      <form action="/secret" method="POST" class="center-form">
+        <button class="btn1">Go Back</button>
+      </form>
                 </div>
 

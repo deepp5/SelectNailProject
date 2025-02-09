@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/images", express.static("images"));
 
 app.get("/", (req, res) => {
-  res.send("Home Page");
+  res.render("register.ejs");
 });
 
 app.get("/register", (req, res) => {
